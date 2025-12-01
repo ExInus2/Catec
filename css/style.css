@@ -2,35 +2,29 @@ body {
   font-family: "Poppins", sans-serif;
   color: #0c0c0c;
   background-color: #ffffff;
+  padding-top: 80px;
 }
 
 .custom_heading {
   font-size: 36px;
   font-weight: 700;
-  color: #023b48; /* color del texto fuera del span */
+  color: #023b48;
 }
 
 .custom_heading span {
-  color: #18d3ff; /* color del texto dentro del span */
+  color: #18d3ff;
 }
 
-/* Header fijo */
 .header_section {
-  position: fixed; /* fija el header en la parte superior */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
-  background-color: #ffffff; /* color de fondo del header */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* opcional: sombra */
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Espacio para que el contenido no quede debajo del header */
-body {
-  padding-top: 80px; /* ajusta según la altura del header */
-}
-
-/* Navbar Brand */
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -48,10 +42,9 @@ body {
   color: #191919;
 }
 
-/* Menú responsivo: en escritorio horizontal, en móvil colapsable */
 @media (max-width: 992px) {
   .navbar-collapse {
-    background-color: #ffffff; /* fondo del menú desplegable */
+    background-color: #ffffff;
   }
 
   .navbar-nav .nav-link {
@@ -59,7 +52,24 @@ body {
     text-align: center;
   }
 }
-/* ===== INICIO (Hero Section) ===== */
+
+.navbar-nav .nav-link.active {
+  position: relative;
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #0d6efd;
+  bottom: -5px;
+  left: 0;
+  border-radius: 3px;
+}
+
 .slider_section {
   background: url("images/hero.jpg") no-repeat center center/cover;
   position: relative;
@@ -73,12 +83,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* capa de transparencia para mejor legibilidad */
+  background: rgba(255, 255, 255, 0.8);
   z-index: 0;
 }
 
@@ -141,13 +146,11 @@ body {
 }
 
 .about_section {
-  background-image: url(../images/about-bg.png);
+  background-image: url("../images/about-bg.png");
   background-size: cover;
 }
 
 .about_section .row {
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
   align-items: baseline;
 }
 
@@ -171,7 +174,7 @@ body {
   background-color: transparent;
   color: #023b48;
 }
-/* Columnas de servicios */
+
 .service_section .row .col-md-4 {
   display: flex;
   flex-direction: column;
@@ -179,7 +182,6 @@ body {
   text-align: center;
 }
 
-/* Fondo circular azul para iconos */
 .service_section .img_box {
   width: 110px;
   height: 110px;
@@ -191,13 +193,11 @@ body {
   margin: 0 auto;
 }
 
-/* Iconos de Font Awesome */
 .service_section .img_box i {
-  font-size: 40px; /* tamaño del icono */
-  color: #ffffff; /* color blanco */
+  font-size: 40px;
+  color: #ffffff;
 }
 
-/* Detalle de servicios */
 .service_section .detail_box {
   margin-top: 25px;
 }
@@ -219,11 +219,10 @@ body {
   color: #023b48;
 }
 
-/* --- Galería uniforme y responsiva --- */
 .gallery-section img {
   width: 100%;
-  height: 280px; /* mismo alto para todas las imágenes */
-  object-fit: cover; /* recorta sin deformar */
+  height: 280px;
+  object-fit: cover;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
@@ -234,14 +233,12 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Espaciado y centrado del título */
 .gallery-section h2 {
   margin-bottom: 40px;
   font-weight: 700;
   color: #023b48;
 }
 
-/* En pantallas pequeñas, ajustar altura */
 @media (max-width: 768px) {
   .gallery-section img {
     height: 220px;
@@ -271,13 +268,9 @@ body {
 
 .client_section .client_container {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   border: 1px solid #606060;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 30px 0;
 }
@@ -307,6 +300,7 @@ body {
     min-height: 300px;
   }
 }
+
 .info_section {
   background-color: #0dc3ff;
 }
@@ -314,25 +308,15 @@ body {
 .info_items {
   width: 70%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
 }
 
 .info_items .item {
   width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: center;
 }
@@ -350,21 +334,17 @@ body {
   color: #fff;
 }
 
-.info_items {
-  position: relative;
-}
-
 .info_items a {
   position: relative;
 }
 
 section {
-  padding: 80px 5%;
+  padding: 100px 5%;
 }
 
 @media (max-width: 768px) {
   section {
-    padding: 50px 2%; /* reduce padding lateral en móviles */
+    padding: 50px 2%;
   }
 }
 
