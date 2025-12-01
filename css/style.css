@@ -61,7 +61,6 @@ body {
 }
 /* ===== INICIO (Hero Section) ===== */
 .slider_section {
-  background: url("images/hero.jpg") no-repeat center center/cover;
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -141,7 +140,10 @@ body {
 }
 
 .about_section {
+<<<<<<< Updated upstream
   background-image: url(../images/about-bg.png);
+=======
+>>>>>>> Stashed changes
   background-size: cover;
 }
 
